@@ -4,7 +4,7 @@ export const WelcomePage = () => {
   return (
     <div className="h-full w-75 mx-auto bg-white flex flex-col">
 
-        <div className="mt-auto bg-white px-3 py-9 space-y-5.5">
+        <div className="mt-auto bg-white px-3.5 py-9 space-y-5.5">
             {/* Welcome Screen text Content */}
             <div className="space-y-1">
                 <h2 className="font-bold text-[22px]">

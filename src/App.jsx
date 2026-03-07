@@ -1,6 +1,11 @@
+import { WelcomePage } from "./pages/WelcomePage";
+
+
 const App = () => {
   return (
-    <div>App</div>
+    <div className="bg-black h-screen w-full py-4">
+      <WelcomePage />      
+    </div>
   )
 }
 

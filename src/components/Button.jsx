@@ -1,5 +1,7 @@
-export const Button = () => {
+export const Button = ( {children, className} ) => {
   return (
-    <div>Button</div>
+    <button className={className}>
+        {children}
+    </button>
   )
 }

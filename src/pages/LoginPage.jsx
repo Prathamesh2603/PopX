@@ -1,6 +1,17 @@
+import { useState } from "react";
 import { Button } from "../components/Button"
 
 export const LoginPage = () => {
+  const [loginId, setLoginId] = useState({
+    email: "",
+    password: ""
+  });
+
+  const handleSumbit = (e) => {
+    e.preventDefault();
+
+  }
+
   return (
     <div className="h-full w-75 mx-auto bg-white">
       
@@ -20,7 +31,7 @@ export const LoginPage = () => {
         </div>
 
         {/* Login */}
-        <form className="">
+        <form onSubmit={handleSumbit}>
           <div>
             <span className="text-[11px] text-[#6C25FF] bg-white font-medium relative top-2 left-1.5 px-2">
               Email address<span className="text-red-500">*</span>
@@ -29,6 +40,8 @@ export const LoginPage = () => {
               type="email"
               placeholder="Marry Doe" 
               required
+              value={loginId.email}
+              onChange={(e) => setLoginId({ ...loginId, email: e.target.value })}
               className="w-full text-xs font-medium px-3 py-2 rounded-lg outline-none border-[1.5px] border-[#E6E6E6]"
             />
           </div>
@@ -40,13 +53,15 @@ export const LoginPage = () => {
               type="password"
               placeholder="Marry Doe" 
               required
+              value={loginId.password}
+              onChange={(e) => setLoginId({ ...loginId, password: e.target.value })}
               className="w-full text-xs font-medium px-3 py-2 rounded-lg outline-none border-[1.5px] border-[#E6E6E6]"
             />
           </div>
           <div className="mt-3">
-              <Button className="bg-[#6C25FF] text-white text-sm font-bold py-2 rounded-md w-full">
-                  Login
-              </Button>
+            <Button className={`${(loginId.email.length && loginId.password.length) ? "bg-[#6C25FF]" : "bg-[#CBCBCB]"} text-white text-sm font-bold py-2 rounded-md w-full`}>
+                Login
+            </Button>
           </div>
         </form>
 

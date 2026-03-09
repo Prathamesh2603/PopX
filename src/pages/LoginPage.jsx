@@ -38,7 +38,7 @@ export const LoginPage = () => {
             </span>
             <input 
               type="email"
-              placeholder="Marry Doe" 
+              placeholder="Enter email Address" 
               required
               value={loginId.email}
               onChange={(e) => setLoginId({ ...loginId, email: e.target.value })}
@@ -51,7 +51,7 @@ export const LoginPage = () => {
             </span>
             <input 
               type="password"
-              placeholder="Marry Doe" 
+              placeholder="Enter password" 
               required
               value={loginId.password}
               onChange={(e) => setLoginId({ ...loginId, password: e.target.value })}

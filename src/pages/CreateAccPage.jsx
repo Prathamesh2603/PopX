@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Button } from "../components/Button"
+import { Link } from 'react-router-dom'
 
 export const CreateAccPage = () => {
   const [newUserAccount, setNewUserAccount] = useState({
@@ -48,7 +49,7 @@ export const CreateAccPage = () => {
                 type="text"
                 placeholder="Marry Doe" 
                 required
-                value={newUserAccount.name}
+                value={"Marry Doe"}
                 onChange={(e) => setNewUserAccount({ ...newUserAccount, name: e.target.value })}
                 className="w-full text-xs font-medium px-3 py-2 rounded-lg outline-none border-[1.5px] border-[#E6E6E6]"
               />
@@ -61,7 +62,7 @@ export const CreateAccPage = () => {
                 type="text"
                 placeholder="Marry Doe" 
                 required
-                value={newUserAccount.phone}
+                value={"Marry Doe"}
                 onChange={(e) => setNewUserAccount({ ...newUserAccount, phone: e.target.value })}
                 className="w-full text-xs font-medium px-3 py-2 rounded-lg outline-none border-[1.5px] border-[#E6E6E6]"
               />
@@ -74,7 +75,7 @@ export const CreateAccPage = () => {
                 type="email"
                 placeholder="Marry Doe" 
                 required
-                value={newUserAccount.email}
+                value={"Marry@gmail.com"}
                 onChange={(e) => setNewUserAccount({ ...newUserAccount, email: e.target.value })}
                 className="w-full text-xs font-medium px-3 py-2 rounded-lg outline-none border-[1.5px] border-[#E6E6E6]"
               />
@@ -87,7 +88,7 @@ export const CreateAccPage = () => {
                 type="password"
                 placeholder="Marry Doe" 
                 required
-                value={newUserAccount.password}
+                value={"Marry Doe"}
                 onChange={(e) => setNewUserAccount({ ...newUserAccount, password: e.target.value })}
                 className="w-full text-xs font-medium px-3 py-2 rounded-lg outline-none border-[1.5px] border-[#E6E6E6]"
               />
@@ -99,7 +100,7 @@ export const CreateAccPage = () => {
               <input 
                 type="text"
                 placeholder="Marry Doe" 
-                value={newUserAccount.company}
+                value={"Marry Doe"}
                 onChange={(e) => setNewUserAccount({ ...newUserAccount, company: e.target.value })}
                 className="w-full text-xs font-medium px-3 py-2 rounded-lg outline-none border-[1.5px] border-[#E6E6E6]"
               />
@@ -115,7 +116,7 @@ export const CreateAccPage = () => {
                     type="radio" 
                     name="isAgency" 
                     value="yes"
-                    checked={newUserAccount.isAgency === "yes"}
+                    checked={"yes"}
                     onChange={(e) => setNewUserAccount({ ...newUserAccount, isAgency: e.target.value })}
                     className="accent-[#6C25FF] w-4 h-4" 
                   />Yes
@@ -136,7 +137,7 @@ export const CreateAccPage = () => {
             {/* Create Account Button */}
             <div>
               <Button className="w-full mt-30 bg-[#6C25FF] text-white text-sm font-bold py-2 rounded-md">
-                  Create Account
+                  <Link to="/setting">Create Account</Link>
               </Button>
             </div>
           </form>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Button } from "../components/Button"
 
 export const WelcomePage = () => {
@@ -20,10 +21,10 @@ export const WelcomePage = () => {
             {/* Welcome screen buttons */}
             <div className="flex flex-col space-y-1.5">
                 <Button className="bg-[#6C25FF] text-white text-sm font-bold py-2 rounded-md">
-                    Create Account
+                    <Link to="/account">Create Account</Link>
                 </Button>
                 <Button className="bg-[#CEBAFB] text-black text-sm font-bold py-2 rounded-md">
-                    Already Registered? Login
+                    <Link to="/login">Already Registered? Login</Link>
                 </Button>
             </div>
 
